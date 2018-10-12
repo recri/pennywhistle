@@ -1,0 +1,54 @@
+#!/usr/bin/wish
+
+#
+# a tcl/tk replacement for the Arduino serial monitor and plotter
+# automatically begins a plot window whenever numbers start streaming.
+#
+
+#
+# use the script location to find the rest of the libraries
+#
+set script [expr { ! [catch {file readlink [info script]} link] ? $link : [info script]}]
+set dirname [file dirname $script]
+
+#
+# append the ../lib directory to the Tcl search path
+#
+lappend auto_path [file join $dirname lib]
+
+#
+# load up some libraries
+#
+package require snit
+
+#
+# install application icon
+# icon derived from the public domain image:
+# https://commons.wikimedia.org/wiki/File:Neutered_kokopelli.svg
+# 
+image create photo icon1 -file [file join $dirname ser96.png]
+image create photo icon2 -file [file join $dirname ser48.png]
+wm iconphoto . -default icon1 icon2
+
+#
+# serial monitor widget
+#
+snit::widget serial-monitor {
+    constructor {args} {
+	grid [ttk::frame $win.menu] -row 0 -column 0 -columnspan 2 -sticky ew
+	grid [ttk::entry $win.entry ] -row 1 -column 0 -columnspan 2 -sticky ew
+	grid [text $win.text] -row 2 -column 0 -sticky nsew
+	grid [ttk::scrollbar $win.bar -orient vertical] -row 2 -column 1 -sticky ns
+	# hook up the entry to send text
+	# hook up the scroll bars to the text display
+	# open the serial line
+	# set fileevent hooks
+    }
+}
+
+proc main {argv} {
+    pack [serial-monitor .t {*}$argv] -fill both -expand true
+    foreach arg $argv { puts $arg }
+}
+
+main $argv

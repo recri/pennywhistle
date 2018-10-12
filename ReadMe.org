@@ -1,0 +1,9 @@
+* Pennywhistle - MIDI breath controller and synthesizer
+** Teensy 3.6 from pjrc.com
+** Custom touch pad boards
+** I2S audio input/output
+** I2C barometer/accelerometer/gyroscope/magentometer
+** audio output to speaker jack or usb audio
+** onboard waveguide synthesis
+** progressive web app configuration and control
+

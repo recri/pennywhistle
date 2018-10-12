@@ -1,0 +1,52 @@
+* Teensy 3.6 pin assignments for edge
+** GND to ground
+** 0 touch pad 0 on top
+** 1 touch pad 2 on top
+** 2 NC
+** 3 NC
+** 4 NC
+** 5 NC
+** 6 NC
+** 7 NC
+** 8 NC
+** 9 I2S BCLK on bottom
+** 10 NC
+** 11 I2S MCLK on bottom
+** 12 NC
+** 3.3V to power
+** 24 NC
+** 25 NC
+** 26 NC
+** 27 NC
+** 28 NC
+** 29 touch pad 4 on top
+** 30 touch pad 6 on top
+** 31 NC
+** 32 NC
+** 
+** 33 I2C SCL on bottom
+** 34 I2C SDA on bottom
+** 35 NC
+** 36 NC
+** 37 NC
+** 38 NC
+** 39 NC
+** DAC0 audio out on bottom
+** DAC1 audio out on bottom
+** GND to ground
+** 13 I2S RXDATA on bottom
+** 14 NC
+** 15 touch pad 5 on top
+** 16 touch pad 7 on bottom
+** 17 touch pad 3 on top
+** 18 touch pad 8 on bottom
+** 19 touch pad 1 on top
+** 20 NC
+** 21 NC
+** 22 I2S TXDATA on botton
+** 23 I2S LRCLK on bottom
+** 3.3V to power
+** AGND NC
+** VIN to amplifier power
+**
+
